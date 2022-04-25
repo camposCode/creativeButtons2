@@ -1,0 +1,53 @@
+:root{
+    --black: #161616;
+    --white: #ececec;
+    --red: #ef5350;
+    --blue: #001FFF;
+    --yellow: #ffdf00;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--black);
+}
+
+/* ///////////////////////
+///////BUTTON ONE */
+a{
+    text-decoration: none;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 40px 80px;
+    transition: all .5s;
+    position: relative;
+    margin-top: 225px;
+    overflow: hidden;
+}
+
+a::before{
+    content: 'Button One';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all .5s;
+}
+
+a:hover::before{
+    transform: scale(1);
+    opacity: 1;
+}
+
