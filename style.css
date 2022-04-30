@@ -9,6 +9,10 @@
     --softPink: #C06C84;
     --softRed: #F67280;
     --softYellow: #F8B195;
+    --charmingPink: #e592a2;
+    --charmingBrown: #f3c6b8;
+    --charmingGrey: #5d698a;
+    --charmingNavy: #282d48;
 }
 
 body{
@@ -136,3 +140,57 @@ a:last-of-type{
     transition: all .9s;
     transition-delay: 0.9s;
 }
+
+
+/* ///////////////////////
+///////BUTTON FOUR */
+.buttonFour{
+    color: transparent;
+    border: 3px solid var(--charmingPink);
+    overflow: visible;
+}
+
+.buttonFour::before{
+    content: 'Button Four';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--charmingNavy);
+    color: var(--charmingPink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s;
+}
+
+.buttonFour:hover::before{
+    left: 100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+}
+
+.buttonFour::after{
+    content: 'Button Four';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--charmingNavy);
+    color: var(--charmingPink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotateY(0deg);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.buttonFour:hover::after{
+    left: 0;
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+}
+
